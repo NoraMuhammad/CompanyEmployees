@@ -130,11 +130,6 @@ namespace CompanyEmployees_struct
             return $"{_day}/{_month}/{_year}";
         }
     }
-    enum Gender
-    {
-        M,
-        F
-    }
     class Program
     {
         static void Main(string[] args)
@@ -150,7 +145,7 @@ namespace CompanyEmployees_struct
                     Console.WriteLine($"Enter non-duplicated ID of employee {i}:");
                     if (int.TryParse(Console.ReadLine(), out int id))
                     {
-                        for (int j = 0; j < empCount; j++)
+                        for (int j = 0; j < i; j++)
                         {
                             if (j != i && employees[j].ID == id)
                                 validID = false;
